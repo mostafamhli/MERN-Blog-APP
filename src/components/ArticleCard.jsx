@@ -1,16 +1,19 @@
 import React from "react";
 import images from "../constants/images";
 import { BsCheck2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const ArticleCard = ({ className }) => {
   return (
     <div
       className={`rounded-xl overflow-hidden shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] ${className}`}
     >
-      <img
-        src={images.post1Image}
-        alt="title"
-        className="w-full object-cover object-center h-auto md:h-52 lg:h-48 xl:h-60"
-      />
+      <Link to="/blog/1">
+        <img
+          src={images.post1Image}
+          alt="title"
+          className="w-full object-cover object-center h-auto md:h-52 lg:h-48 xl:h-60"
+        />
+      </Link>
       <div className="p-5">
         <h2 className="font-roboto text-xl font-bold text-dark-soft md:text-2xl lg:text-[28px]">
           Future of Work
@@ -25,6 +28,7 @@ const ArticleCard = ({ className }) => {
               alt="post profile"
               className="w-9 h-9 md:w-10 md:h-10"
             />
+
             <div className="flex flex-col">
               <h4 className="italic font-bold text-dark-soft text-sm md:text-base">
                 Viola Manisa
